@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel='stylesheet' href='/css/main2.css' />
+  <link rel="icon" type="image/x-icon" href="/icon.png">
+    <title>Edit Category</title>
+</head>
+<body>
+  <div class="loginBody">
+    <div class="container1">
+        <form  action="/users/category/edit/<%=category_id%>/<%=category_name%>" method="POST" form id="editcategory">
+          <h1 class="form__title">Input updated name for the category</h1>
+          <div class="form__input-group">
+            <input type="text" class="form__input placehold" id="category_name_modify" name="category_name_modify"  placeholder="Category Name" value = "<%=category_name%>" required oninvalid="this.setCustomValidity('Enter Category Name Here!')"
+            oninput="this.setCustomValidity('')"/>
+            <div style="height: 20px;"></div>
+            <button class="login__button" type="submit">Save Changes</button>
+            <div class="form__input-error-message" ><% if(messages.error_msg) { %>
+              <li style="list-style-type: none"><%= messages.error_msg %></li>
+            <% } %> 
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</body>
+</html>

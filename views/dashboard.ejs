@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel='stylesheet' href='/css/main2.css' />
+  <link rel="icon" type="image/x-icon" href="/icon.png">
+    <title>Dashboard</title>
+</head>
+
+<body style="background: #009579; width: 1537px;">
+  <div style="min-height:100vh; display:flex; flex-direction:column; 
+  justify-content:space-between;">
+
+    <!-- Header -->
+    <div class="header_row">
+
+      <div class="column1">
+        <h1><strong>Hello <%= user %></strong></h1>
+      </div>
+
+      <div class="column3">
+        <form action="/users/logout">
+          <button type="submit" class="form__button" style="width: 100%;">Log Out</button>
+        </form>
+      </div>
+
+      <div class="column2">
+
+        <h1><b>FAM BUDGETLY</b></h1>
+      </div>
+
+      <div class="columnheader">
+        <img src="/headericon.png" alt="headerIcon" width="200px" height="105px">
+      </div>
+
+    </div>
+
+    <div class="header_row">
+      <div class="column4">
+        <section>
+
+          <nav>
+            <ul>
+              <li style="color: #009579">
+                <h2><b>Main</b></h2>
+              </li>
+              <li><a href="/users/dashboard"><b>Dashboard</b></a></li>
+              <li><a href="/users/profile"><b>Profile</b></a></li>
+              <li><a href="/users/viewbudget"><b>View Budget</b></a></li>
+              <li><a href="/users/viewspending"><b>View Spendings</b></a></li>
+              <li><a href="/users/spending"><b>Spendings</b></a></li>
+              <div class="form__message--error" >
+                <% if(messages.error_msg) { %>
+                  <li style="list-style-type: none"><%= messages.error_msg %></li>
+                <% } %> </div>
+                <div class="form__message--success"><% if(messages.success_msg) { %>
+                  <li style="list-style-type: none"><%= messages.success_msg %></li>
+                <% } %> </div>
+                <%if(user_role=="super" ){ %>
+                  <li style="color: #009579">
+                      <h2><b>Customize</b></h2>
+                  </li>
+                  <li><a href="/users/category"><b>Manage Categories</b></a></li>
+                  <li><a href="/users/managebudget"><b>Manage Budget</b></a></li>
+                  <li><a href="/users/startmonth"><b>Start Month</b></a></li>
+                  <li><a href="/users/allUsers"><b>Manage Users</b></a></li>
+                  <li style="color: #009579">
+                    <h2><b>Filters</b></h2>
+                  </li>
+                  <li><a href="/users/allspending"><b>All Spendings</b></a></li>
+                  <li><a href="/users/generatereport"><b>Generate Report</b></a></li>
+                  <% } else {%>
+                    <div style="height: 400px;"></div>
+                  <% } %>
+            </ul>
+            
+          </nav>
+        </section>
+      </div>
+      
+      <div class="column5">
+            <img src="/Budget.jpg" alt="Budget Picture" class="center">
+       
+      </div>
+      <div class="column6">
+        <img src="/Savings.png" alt="Savings" width="100%" height="600px">
+      </div>
+    </div>
+  </div>
+
+
+
+    <footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <h3>Fam <span>Budgetly</span></h3>
+
+        <p class="footer-company-name">Fam Budgetly © 2022</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>12666 72 Avenue, Surrey, BC, Canada</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+1.555.555.5555</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:fambudgetly@outlook.com">fambudgetly@outlook.com</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the company</span>
+          Fam Budgetly is designed to help you manage your budget. Families can now spend wisely and save as
+          much as they want.
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="https://www.facebook.com"><img src="/FB.png"></i></a>
+          <a href="https://www.twitter.com"><img src="/Twitter.png"></i></a>
+          <a href="https://www.linkedin.com/in/ramandeepsingh146"><img src="/Linkedin.png"></i></a>
+          <a href="https://www.github.com/ramandeep146"><img src="/Github.png"></i></a>
+
+        </div>
+
+      </div>
+    </footer>
+  </div>
+  <div >
+
+
+</body>
+
+</html>

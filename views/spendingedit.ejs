@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Spending</title>
+    <link type="text/css" rel='stylesheet' href='/css/main2.css' />
+  <link rel="icon" type="image/x-icon" href="/icon.png">
+</head>
+<body>
+  <div class="loginBody">
+    <div class="container1">
+        <% function dateTime(myDate){ %>
+            <%let dt = new Date(myDate);%>
+            <%let date = ("0" + dt.getUTCDate()).slice(-2);%>
+            <%let month = ("0" + (dt.getUTCMonth() + 1)).slice(-2);%>
+            <%let year = dt.getFullYear();%>
+    
+    
+            <%var output = year + "-" + month + "-" + date;%>
+            <%return output; %>
+            <% }%>
+            <div class="form__input">
+        <form action="/users/spending/edititem/<%= category_id %>/<%= time_of_entry%>" method="POST" form id="editspending">
+          <h1 class="form__title">Edit Spendings</h1>
+            <select name="category" id="category" class="form__button margins" required>
+            <% for(let iCount=0; iCount < allCategory.length; iCount++) { %> 
+                <%if(category_id==allCategory[iCount].category_id){%>  
+                <option value = "<%=allCategory[iCount].category_id%>" selected><%=allCategory[iCount].category_name%></option>
+                <% }else {%>
+                    <option value = "<%=allCategory[iCount].category_id%>"><%=allCategory[iCount].category_name%></option>
+                <% }%>    
+            <% } %>
+            </select>
+            <input type="number" style="width:fit-content"
+            class="form__button margins" step=".01" min="0" id="spending" name="spending" value="<%=spending%>" required/>
+            <input type="date" style="width:fit-content"
+            class="form__button margins" id="spending_date" name="spending_date" value=<%=dateTime(spending_date)%> required/>
+            <button class="form__button btn" type="submit">Save Changes</button>
+            <div class="form__input-error-message" ><% if(messages.error_msg) { %>
+              <li style="list-style-type: none"><%= messages.error_msg %></li>
+            <% } %> </div>
+            <div class="form__input-success-message" ><% if(messages.success_msg) { %>
+              <li style="list-style-type: none"><%= messages.success_msg %></li>
+            <% } %> </div>
+          </div>
+        </form>
+        </div>
+      </div>
+</body>
+</html>
