@@ -13,25 +13,28 @@
   justify-content:space-between;">
 
     <!-- Header -->
-    <div class="header_row">
+    <div class="header_row" style="background-color: black; border-bottom: 2px solid white">
 
-      <div class="column1">
+      <div class="column1" style="background-color: black;">
         <h1><strong>Hello <%= user %></strong></h1>
       </div>
 
-      <div class="column3">
+      <div class="column3" style="background-color: black;">
         <form action="/users/logout">
-          <button type="submit"  class="form__button" style="width: 100%;">Log Out</button>
+          <button type="submit" class="form__button" style="width: 100%;">Log Out</button>
         </form>
       </div>
 
+      
+      <div style="margin-top: 20px;">
       <div class="column2">
 
-        <h1><b>FAM BUDGETLY</b></h1>
+        <h1 style="color: #009579; font-size: 50px;"><b>FAM BUDGETLY</b></h1>
       </div>
 
       <div class="columnheader">
-        <img src="/headericon.png" alt="headerIcon" width="200px" height="105px">
+        <img src="/headericon.png" alt="headerIcon" width="140px" height="90px">
+      </div>
       </div>
 
     </div>

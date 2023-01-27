@@ -1125,7 +1125,8 @@ function viewBudget(methodType){
                     FROM budget_data LEFT JOIN category
                     ON budget_data.category_id = category.category_id
                     WHERE EXTRACT(YEAR FROM budget_data.time_created) = $1
-                    AND EXTRACT(MONTH FROM budget_data.time_created) = $2`, [theYear, theMonth], (err, results)=>{
+                    AND EXTRACT(MONTH FROM budget_data.time_created) = $2
+                    AND budget_data.active = $3`, [theYear, theMonth, checkActivated.ACTIVATED], (err, results)=>{
                         if(err){
                             throw err;
                         }
