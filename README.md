@@ -4,37 +4,37 @@ A web application made for a single family to manage their monthly budget. Fam-B
 - Embedded JavaScript (EJS) is used for the Front-End
 
 All Functions:
-1. Registration
+1. Registration: 
 	Regular users can register themselves using the registration page.
 
-2.	Sign-In/login
+2.	Sign-In/login: 
 	Super users and regular users can log into their account with different privileges.
 
-3.	Ability to change personal information 
+3.	Ability to change personal information: 
 	All users can change their personal information like name, password, email etc.
 
-4.	Ability to add, alter or remove Regular Users
+4.	Ability to add, alter or remove Regular Users: 
 	Implement user management system to manage (add, delete, or edit) users. This privilege is only available to Super Users.
 
-5.	Start of Month
+5.	Start of Month: 
 	Every month, the Super User must start the month. If not started, no user can add their spendings in the system until the budget for the month is not started. 
 
-6.  Categories
+6.  Categories: 
 	Super user can add, change, or delete budget categories.
 
-7.	Notification (Start of Month)
+7.	Notification (Start of Month): 
 	If month not started, the system would send out a reminder email on the 2nd day of the month to super users. Email will be sent daily until the super user starts the month. 
 
-8.	Spending
+8.	Spending: 
 	All users can add, alter, or delete personal spending data once the month has been started.
 
-9.	Altering/Deleting Spending Data (After Month’s Completion)
+9.	Altering/Deleting Spending Data (After Month’s Completion): 
 	When new month starts, regular users cannot input, alter, or delete any spending data. Super users are able to add or alter spending data, but they are not able to delete data for previous months.   
 
-10.	Notification Email (Exceeding Budget Warning)
+10.	Notification Email (Exceeding Budget Warning): 
 	When any category's total spending reaches 80% of the budget, the system will send an alert email to all users. 
 
-11.	Generating Reports
+11.	Generating Reports: 
 	The super user account type should be able to generate a monthly report.
 
 
