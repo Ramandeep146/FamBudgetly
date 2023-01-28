@@ -14,7 +14,7 @@ All Functions:
 	All users can change their personal information like name, password, email etc.
 
 4.	Ability to add, alter or remove Regular Users: 
-	Implemented user management system to manage (add, delete, or edit) users. This privilege is only available to Super Users.
+	Implemented user management system to manage (add, delete, or edit) regular users accounts. This privilege is only available to Super Users.
 
 5.	Start of Month: 
 	Every month, the Super User must start the month. If not started, no user can add their spendings in the system until the budget for the month is not started. 
