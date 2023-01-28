@@ -1,4 +1,4 @@
-#FamBudgetly
+# FamBudgetly
 A web application made for a single family to manage their monthly budget. Fam-Budgetly allows users to start budget every month, manage users, manage spendings, manage categories, manage profile, implement automatic notifications etc.
 - Implemented Node.js, Express.js, RESTful API for the backend
 - PostgreSQL is used as the database system
