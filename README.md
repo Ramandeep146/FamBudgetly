@@ -35,7 +35,7 @@ All Functions:
 	When any category's total spending reaches 80% of the budget, the system will send an alert email to all users. 
 
 11.	Generating Reports: 
-	The super user account type should be able to generate a monthly report.
+	The super users are able to generate a monthly report and download a CSV file containing the data.
 
 
 Total time taken to complete the project: 2 Months.
